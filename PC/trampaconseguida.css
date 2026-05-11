@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ff0000; /* Fondo rojo puro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    animation: shake 0.5s infinite; /* Efecto de vibración constante */
+}
+
+.warning-icon {
+    font-size: 100px;
+    animation: blink 0.8s infinite;
+}
+
+h1 {
+    font-size: 5rem;
+    text-shadow: 5px 5px #000;
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 1.5rem;
+    background: black;
+    padding: 10px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.alert-bar {
+    background: black;
+    padding: 15px 0;
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    transform: rotate(-5deg);
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px solid yellow;
+    border-bottom: 5px solid yellow;
+}
+
+.alert-bar span {
+    color: yellow;
+    font-weight: bold;
+}
+
+.btn-back {
+    margin-top: 150px;
+    padding: 15px 30px;
+    background: white;
+    color: red;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.2s;
+}
+
+.btn-back:hover {
+    transform: scale(1.2) rotate(5deg);
+    background: #000;
+    color: #fff;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animación de vibración */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
